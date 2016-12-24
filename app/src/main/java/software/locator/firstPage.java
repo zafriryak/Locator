@@ -36,13 +36,14 @@ public class firstPage extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long l) {
       //  Toast.makeText(this,userName.getText().toString(),Toast.LENGTH_LONG);
-        System.out.println(parent.getItemAtPosition(pos) );
-        System.out.println("what it enterd:   "+userName.getText().toString());
+       // System.out.println(parent.getItemAtPosition(pos) );
+        //System.out.println("what it enterd:   "+userName.getText().toString());
         if (parent.getItemAtPosition(pos).equals("Technician") && userName.getText().toString().equals("Technician")) {
 
             signInButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
+
                     Intent intent=new Intent(firstPage.this,MainActivity.class);
                     startActivity(intent);
                 }

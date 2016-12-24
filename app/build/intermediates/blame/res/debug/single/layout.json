@@ -84,12 +84,12 @@
         "source": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_list.xml",
-        "source": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\src\\main\\res\\layout\\activity_list.xml"
-    },
-    {
         "merged": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_list.xml",
+        "source": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\src\\main\\res\\layout\\activity_list.xml"
     },
     {
         "merged": "C:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

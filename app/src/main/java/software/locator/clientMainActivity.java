@@ -53,6 +53,7 @@ public class clientMainActivity extends AppCompatActivity {
 
     public void B2click() {
         Intent intent = new Intent(this, ListActivity.class);
+        intent.putExtra("prem","user");
         startActivity(intent);
     }
 

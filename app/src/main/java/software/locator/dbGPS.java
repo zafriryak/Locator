@@ -8,14 +8,16 @@ public class dbGPS {
 
     private String name;
     private String cordinate;
+    private String key;
 
     public  dbGPS(){
 
     }
 
-    public dbGPS(String name,String cordinate){
+    public dbGPS(String name,String cordinate,String key){
         this.name=name;
         this.cordinate=cordinate;
+        this.key=key;
     }
 
     public dbGPS(dbGPS d){
@@ -23,6 +25,9 @@ public class dbGPS {
         cordinate=d.cordinate;
     }
 
+    public String getKey(){
+        return key;
+    }
     public String getName()
     {
         return name;

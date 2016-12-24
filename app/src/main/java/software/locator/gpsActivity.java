@@ -71,11 +71,11 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
                 B1click();
             }
         });
+
+
         modelItems=new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase = mDatabase.getRoot().child("GPSdb");
-
-
         ValueEventListener v= new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -83,8 +83,8 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     dbGPS  d= ( postSnapshot.getValue(dbGPS.class));
                     //dbBle d1=(dbBle)d;
-                    System.out.println(d.toString());
-                    modelItems.add(new dbGPS(d.getName(),d.getCordinate()));
+                   // System.out.println(d.toString());
+                    modelItems.add(new dbGPS(d.getName(),d.getCordinate(),d.getKey()));
                 }
             }
 
@@ -221,13 +221,21 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
         }
         Bundle bundle=getIntent().getExtras();
         String name = bundle.getString("name");
-
-        dbGPS d1 = new dbGPS(name, "" + location.getLatitude() + "," + location.getLongitude());
         DatabaseReference mDatabase=null;
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("GPSdb").push().setValue(d1);
-
-
+        boolean found=false;
+        for (int i=0; !found && i<modelItems.size() ; i++){
+            if(modelItems.get(i).getName().equals(name)){
+                dbGPS d1 = new dbGPS(name, "" + location.getLatitude() + "," + location.getLongitude(),modelItems.get(i).getKey());
+                mDatabase.child("GPSdb").child(modelItems.get(i).getKey()).setValue(d1);
+                found=true;
+            }
+        }
+        if(!found){
+            String key=mDatabase.child("GPSdb").push().getKey();
+            dbGPS d1 = new dbGPS(name, "" + location.getLatitude() + "," + location.getLongitude(),key);
+            mDatabase.child("GPSdb").child(key).setValue(d1);
+        }
     }
 
     protected synchronized void buildGoogleApiClient() {
