@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -24,8 +23,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
 
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.WeakHashMap;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
