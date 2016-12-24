@@ -1,0 +1,7 @@
+#Sat Dec 24 18:21:25 IST 2016
+base.0=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_699d6fb996a841ee532e21e4b51337dd4d1bb09b
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_2b10e3254552f9d764de00f7ec26c973f05777d2\\classes.dex
+base.1=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_2b10e3254552f9d764de00f7ec26c973f05777d2
+file.0=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_699d6fb996a841ee532e21e4b51337dd4d1bb09b\\classes.dex
