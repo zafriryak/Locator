@@ -67,8 +67,6 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
         B1=(Button)findViewById(R.id.friends_button);
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,11 +74,6 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
                 B1click();
             }
         });
-
-
-
-
-
         modelItems=new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase = mDatabase.getRoot().child("GPSdb");
@@ -104,9 +97,6 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
             }
         };
         mDatabase.addValueEventListener(v);
-
-
-
     }
 
 
@@ -184,9 +174,6 @@ public class gpsActivity extends FragmentActivity implements OnMapReadyCallback,
         LatLng ariel = new LatLng(32.105650,35.204395);
         mMap.addMarker(new MarkerOptions().position(ariel).title("Marker in Ariel"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(ariel));
-       /* LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
     }
 
     @Override

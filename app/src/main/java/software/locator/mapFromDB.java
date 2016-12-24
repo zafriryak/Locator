@@ -78,24 +78,16 @@ public class mapFromDB extends FragmentActivity implements OnMapReadyCallback, G
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
-
         Bundle bundle=getIntent().getExtras();
         String latlang = bundle.getString("cor");
         String name=bundle.getString("name");
-        //Toast.makeText(this,"MAPFROMDB:  "+latlang, Toast.LENGTH_LONG).show();
         String array[]=latlang.split(",");
-
         array[0]=array[0].trim();
         array[1]=array[1].trim();
-
-       // Toast.makeText(this," lat:  "+array[0], Toast.LENGTH_LONG).show();
-        //Toast.makeText(this," lang:  "+array[1], Toast.LENGTH_LONG).show();
         LatLng dblocation;
         dblocation = new LatLng(Double.parseDouble(array[0]), Double.parseDouble(array[1]));
 
-     //}
-        // Add a marker in Sydney and move the camera
-       // LatLng dblocation = new LatLng(0, 0);
+
         mMap.addMarker(new MarkerOptions().position(dblocation).title(name));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dblocation));
     }
@@ -125,30 +117,7 @@ public class mapFromDB extends FragmentActivity implements OnMapReadyCallback, G
     @Override
     public void onLocationChanged(Location location)
     {
-      /*  mLastLocation = location;
-        if (mCurrLocationMarker != null) {
-            mCurrLocationMarker.remove();
-        }
 
-        //Place current location marker
-        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        markerOptions.title("Current Position");
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
-        mCurrLocationMarker = mMap.addMarker(markerOptions);
-
-        //move map camera
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-
-        //stop location updates
-        if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        }
-
-        //change location on db.
-        */
     }
 
     protected synchronized void buildGoogleApiClient() {

@@ -294,14 +294,6 @@ public class tecMap extends FragmentActivity implements OnMapReadyCallback , Goo
     }
 
 
-
-
-
-
-
-
-
-
     // this is method call from on create and return bitmap image of QRCode.
     Bitmap encodeAsBitmap(String str) throws WriterException {
         BitMatrix result;

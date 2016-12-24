@@ -128,7 +128,7 @@ public class DeviceListFragment extends Fragment implements AbsListView.OnItemCl
         Log.d("DEVICELIST", "Adapter created\n");
 
 
-
+        //get BLE DB
         modelItems=new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase = mDatabase.getRoot().child("BLEdb");
@@ -216,9 +216,6 @@ public class DeviceListFragment extends Fragment implements AbsListView.OnItemCl
             }
         }
        if(cor.equals("0,0")){
-            //dbBle d1 = new dbBle(deviceItemList.get(position).getAddress(),"32.494707, 35.491071");
-            //DatabaseReference mDatabase=null;
-           // mDatabase.child("BLEdb").push().setValue(d1);
            Intent i= new Intent(getActivity(),tecMap.class);
            i.putExtra("from","ble");
            i.putExtra("mac",deviceItemList.get(position).getAddress());

@@ -52,10 +52,7 @@ public class qrActivity extends AppCompatActivity implements ZXingScannerView.Re
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-
-
-
-////////////////////////////
+        //get QR DB
         modelItems=new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase = mDatabase.getRoot().child("QRdb");
@@ -79,11 +76,8 @@ public class qrActivity extends AppCompatActivity implements ZXingScannerView.Re
             }
         };
         mDatabase.addValueEventListener(v);
-//////////////////////////////////////////////////////////
-
 
         QrScanner(mScannerView);
-
     }
 
     public void QrScanner(View view){
@@ -96,13 +90,10 @@ public class qrActivity extends AppCompatActivity implements ZXingScannerView.Re
                 requestPermission();
             }
         }
-
         mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
         setContentView(mScannerView);
-
         mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
         mScannerView.startCamera();         // Start camera
-
     }
 
     private boolean checkPermission() {
@@ -189,10 +180,7 @@ public class qrActivity extends AppCompatActivity implements ZXingScannerView.Re
         Intent i =new Intent(this,mapFromDB.class);
         i.putExtra("cor",cor);
         startActivity(i);
-
-//////////////////////
-
-
+////////////////////
 
         AlertDialog alert1 = builder.create();
         alert1.show();
