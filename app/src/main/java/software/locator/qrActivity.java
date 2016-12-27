@@ -173,7 +173,6 @@ public class qrActivity extends AppCompatActivity implements ZXingScannerView.Re
                 cor = modelItems.get(i).getCordinate();
             }
         }
-
         Intent i =new Intent(this,mapFromDB.class);
         i.putExtra("cor",cor);
         startActivity(i);

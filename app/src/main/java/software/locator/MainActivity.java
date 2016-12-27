@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity  {
     public void B1click()
     {
         Intent intent = new Intent(this, tecMap.class);
+        intent.putExtra("from","");
+        intent.putExtra("mac","");
         startActivity(intent);
     }
 

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 24 21:10:39 IST 2016
+#Sat Dec 24 23:06:17 IST 2016
 1073.file=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_grey600.png
 1090.base=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\resources-debug.ap_
 1007.base=C\:\\Users\\Zafrir\\AndroidStudioProjects\\Locator\\app\\build\\intermediates\\res\\resources-debug.ap_
